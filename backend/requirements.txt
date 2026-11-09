@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+scikit-learn
+pandas
+numpy
+joblib
+shap
+sqlalchemy
+pymysql
+cryptography
+bcrypt
+pyjwt
+python-dotenv
+reportlab

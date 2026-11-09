@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EduGuard AI - Prediksi Risiko Akademik</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<section id="login">
+  <button class="theme" data-act="theme" aria-label="Ganti tema"></button>
+  <div class="box glass">
+    <div class="mark"><svg viewBox="0 0 120 130" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><path d="M60 4 112 16v54c0 24-26 46-52 56C34 116 8 94 8 70V16z" fill="url(#lg)"/><path d="M60 32 92 45 60 58 28 45z" fill="#fff"/><path d="M42 52v14c10 8 26 8 36 0V52L60 60z" fill="#ffffffcc"/><path d="M40 92l12 6 10-10 14-12" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <h1>EduGuard <span class="grad">AI</span></h1>
+    <p class="mut c">Sistem prediksi risiko akademik mahasiswa</p>
+    <div class="secure">Akses terbatas: hanya Admin dan Dosen terdaftar yang dapat masuk</div>
+    <div class="tabs" role="tablist" aria-label="Masuk sebagai">
+      <button type="button" class="tab on" role="tab" aria-selected="true" data-act="peran" data-p="dosen">Dosen</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-act="peran" data-p="admin">Admin</button>
+    </div>
+    <label for="u" id="ulbl">NIDN</label>
+    <input id="u" inputmode="numeric" maxlength="10" autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="10 digit NIDN">
+    <label for="p">Kata sandi</label>
+    <div class="pw"><input id="p" type="password" autocomplete="current-password" placeholder="kata sandi"><button type="button" data-act="eye" aria-label="Tampilkan kata sandi">Lihat</button></div>
+    <div class="err" id="err" role="alert"></div>
+    <button class="btn" id="go"><span>Masuk</span></button>
+    <p class="mut c small">Belum punya akun? Hubungi Admin Akademik. Setiap percobaan masuk dicatat.</p>
+  </div>
+</section>
+
+<div id="app" class="hidden">
+  <aside class="glass">
+    <div class="logo"><span class="dotlogo"></span>EduGuard<b class="grad">AI</b></div>
+    <nav id="nav"></nav>
+    <div class="who" id="who"></div>
+  </aside>
+  <main id="main"></main>
+</div>
+<div class="toast hidden" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
