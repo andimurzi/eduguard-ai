@@ -48,7 +48,7 @@ from pdf_export import pdf_daftar, pdf_detail
 
 if len(SECRET) < 32:
 
-    raise RuntimeError("JWT_SECRET belum diisi (minimal 32 karakter). Lihat .env.example")
+    raise RuntimeError("ju6i7Ot9XbGaOf3yEfIHJZ1PjvMiW8u21QlXmHDefdV5KBJkceFmp715G0ZUaYUt")
 
 
 
@@ -835,4 +835,7 @@ def log_akses(u=Depends(butuh("admin"))):
 
 # Frontend dilayani dari alamat yang sama (harus paling akhir)
 
-app.mount("/", StaticFiles(directory=os.path.join(BASE, "..", "frontend"), html=True), name="web")
+FRONTEND = os.path.join(BASE, "frontend")
+if not os.path.isdir(FRONTEND):                      # cadangan: struktur lama (frontend sejajar backend)
+    FRONTEND = os.path.join(BASE, "..", "frontend")
+app.mount("/", StaticFiles(directory=FRONTEND, html=True), name="web")
